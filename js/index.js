@@ -47,7 +47,7 @@ function displayReviews(data) {
                 <div class="card-header">
                     <h4 class="my-0 font-weight-normal">${restaurant.name} - ${restaurant.location}</h4>
                     <br>
-                    <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" onclick="toggleInfo(${index})">Show Details</button>
+                    <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" onclick="toggleInfo(${index})">Show Reviews</button>
                 </div>
                 <div id="info-${index}" class="card-body" style="display: none;">
                     <h5>Starter: ${restaurant.dishes.starter.name} (Rating: ${restaurant.dishes.starter.rating})</h5>
