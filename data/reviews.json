@@ -1,0 +1,100 @@
+{
+    "restaurants": [
+      {
+        "name": "La Colombe",
+        "location": "Cape Town",
+        "dishes": {
+          "starter": {
+            "name": "Tuna La Colombe",
+            "rating": 4.9,
+            "review": "A beautifully plated tuna with flavors inspired by Japanese cuisine, served with miso, truffle, and edamame. The tuna is delicate and melts in your mouth, with earthy notes from the truffle balancing the umami miso flavors.",
+            "image": "images/tuna-la-colombe.jpg"
+          },
+          "main_course": {
+            "name": "Line Fish of the Day",
+            "rating": 4.8,
+            "review": "This dish features the freshest locally sourced fish, delicately seasoned and grilled to perfection. It’s served with a seasonal vegetable medley and a vibrant sauce vierge that enhances the natural flavors of the fish without overpowering.",
+            "image": "images/fish of the day.jpg"
+          },
+          "dessert": {
+            "name": "Rose & Raspberry Parfait",
+            "rating": 4.7,
+            "review": "A refreshing and light parfait, with floral notes from the rose blending beautifully with the tang of raspberry. The texture is smooth and creamy, with subtle sweetness making it the perfect end to a meal.",
+            "image": "images/Rose.jpg"
+          }
+        }
+      },
+      {
+        "name": "Test Kitchen",
+        "location": "Cape Town",
+        "dishes": {
+          "starter": {
+            "name": "Crispy Duck Salad",
+            "rating": 4.9,
+            "review": "A vibrant mix of fresh greens, tender duck confit, and a tangy Asian-inspired dressing. The crispy duck adds a delightful texture contrast and the dressing brings everything together with a burst of flavor.",
+            "image": "images/Duck-blood-orange-salad.jpg"
+          },
+          "main_course": {
+            "name": "Springbok Loin",
+            "rating": 5.0,
+            "review": "The tender, perfectly cooked Springbok is served with a spiced jus, caramelized carrots, and a sweet potato puree. The balance of flavors highlights the rich game meat, making it a standout dish.",
+            "image": "images/springbok.jpg"
+          },
+          "dessert": {
+            "name": "Passion Fruit Cheesecake",
+            "rating": 4.8,
+            "review": "The cheesecake is smooth and creamy, with a bright, tropical twist from passion fruit. It’s topped with a crunchy biscuit base and garnished with fresh fruit, creating an indulgent yet refreshing dessert.",
+            "image": "images/passionfruit-cheesecake-DSC_4042-1600.jpg"
+          }
+        }
+      },
+      {
+        "name": "Wolfgat",
+        "location": "Paternoster",
+        "dishes": {
+          "starter": {
+            "name": "Beach Herbs Salad",
+            "rating": 4.8,
+            "review": "This unique salad combines foraged beach herbs and seasonal greens, dressed with a mild vinaigrette. The dish offers a fresh, earthy experience, showcasing the local coastal flavors.",
+            "image": "images/beach.jpg"
+          },
+          "main_course": {
+            "name": "Sustainable Fish with Seaweed Butter",
+            "rating": 4.9,
+            "review": "Perfectly cooked fish served with a rich, umami-packed seaweed butter, and accompanied by seasonal vegetables. The seaweed butter elevates the dish with subtle oceanic flavors that complement the fish beautifully.",
+            "image": "images/Wolfgat-lpinmusselsveldkool-scaled.jpg"
+          },
+          "dessert": {
+            "name": "Fynbos & Honey Ice Cream",
+            "rating": 4.7,
+            "review": "This dessert offers a creamy, floral experience with flavors inspired by the local fynbos plants, sweetened with wild honey. The unique flavors capture the essence of the region in every bite.",
+            "image": "images/honey ice cream.jpg"
+          }
+        }
+      },
+      {
+        "name": "The Pot Luck Club",
+        "location": "Cape Town",
+        "dishes": {
+          "starter": {
+            "name": "Smoked Beef Tartare",
+            "rating": 4.8,
+            "review": "A sophisticated tartare with smoked beef, capers, and pickled onions, served with toasted sourdough. The smoke adds a robust depth to the beef, and the capers add a briny contrast.",
+            "image": "images/tarttare.jpg"
+          },
+          "main_course": {
+            "name": "Lamb Breyani",
+            "rating": 4.9,
+            "review": "Indulge in a taste of the Cape with this mouthwatering Lamb Breyani! The star of the dish, a tender lamb shank potjie, is cooked to perfection in a base of roasted tomato and root vegetables, paired with fresh, homemade roti. On the main plate, enjoy a cured, open-fire roasted lamb loin, topped with a lively sprouted lentil sambal, zesty green mango and lemon atchar, and crispy parsnip accents. A drizzle of rich lamb and curry oil brings it all together, delivering an unforgettable burst of flavor!",
+            "image": "images/Lamb biriyani.jpg"
+          },
+          "dessert": {
+            "name": "Strawberries and Cream Classic",
+            "rating": 4.7,
+            "review": "Strawberries and cream - the classic summer combo. Accompanied by olive oil cake, lemon semifreddo, strawberry sorbet and a brut rose and hibiscus dressing",
+            "image": "images/images.jpg"
+          }
+        }
+      }
+    ]
+  }

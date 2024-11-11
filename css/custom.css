@@ -1,0 +1,139 @@
+/* Base font size adjustments */
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Header styling */
+.blog-header {
+  margin-top: 7rem;
+  max-width: 700px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .blog-header {
+    margin-top: 8rem;
+  }
+}
+
+/* Container adjustments */
+.container {
+  max-width: 960px;
+}
+
+/* Navigation styling */
+nav {
+  display: flex;
+  gap: 1rem;
+  
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+/* Team images (thumbnails of team members or decorative images) */
+.team {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin-bottom: 2rem;
+}
+
+.team img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+/* Card layout */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-deck .card {
+  min-width: 220px;
+  flex: 1;
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-header button{
+  background-color: #555;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-body h5{
+  text-align: center;
+  font-size: large;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.card-text {
+  padding-top: 1rem;
+  color: #555;
+}
+
+/* Image styling */
+.card-body img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 0.25rem;
+}
+
+/* Active navigation link */
+.active {
+  border-bottom: 2px solid black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .card {
+    margin: 1rem 0;
+  }
+
+  .card-header,
+  .card-body {
+    padding: 1rem;
+  }
+
+  .team img {
+    width: 70px;
+    height: 70px;
+  }
+}
