@@ -2,9 +2,6 @@ let rootPath = 'data/reviews.json';
 
 function init() {
     document.getElementById("getAll").addEventListener('click', getAllReviews);
-    document.getElementById("getPopular").addEventListener('click', getPopularReviews);
-    document.getElementById("getLatest").addEventListener('click', getLatestReviews);
-
     getAllReviews();
 }
 
@@ -13,27 +10,11 @@ function getAllReviews() {
     setActiveLink("getAll");
 }
 
-function getPopularReviews() {
-    fetchReviews("popular");
-    setActiveLink("getPopular");
-}
-
-function getLatestReviews() {
-    fetchReviews("latest");
-    setActiveLink("getLatest");
-}
-
-function fetchReviews(category = "all") {
+function fetchReviews() {
     fetch(rootPath)
         .then(response => response.json())
         .then(data => {
-            let filteredData = data.restaurants;
-            if (category === "popular") {
-                filteredData = filteredData.filter(restaurant => restaurant.dishes.starter.rating >= 4.5);
-            } else if (category === "latest") {
-                filteredData = filteredData.slice(-3);
-            }
-            displayReviews(filteredData);
+            displayReviews(data.restaurants);
         })
         .catch(error => console.error("Error fetching reviews:", error));
 }
@@ -50,15 +31,19 @@ function displayReviews(data) {
                     <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" onclick="toggleInfo(${index})">Show Reviews</button>
                 </div>
                 <div id="info-${index}" class="card-body" style="display: none;">
-                    <h5>Starter: ${restaurant.dishes.starter.name} (Rating: ${restaurant.dishes.starter.rating})</h5>
+                    <h3>Starter: ${restaurant.dishes.starter.name} (Rating: ${restaurant.dishes.starter.rating})</h3>
                     <img src="${restaurant.dishes.starter.image}" class="card-img-top" style="width:100%; height:auto;"/>
                     <p class="card-text">${restaurant.dishes.starter.review}</p>
 
-                    <h5>Main Course: ${restaurant.dishes.main_course.name} (Rating: ${restaurant.dishes.main_course.rating})</h5>
+                    <hr>
+
+                    <h3>Main Course: ${restaurant.dishes.main_course.name} (Rating: ${restaurant.dishes.main_course.rating})</h3>
                     <img src="${restaurant.dishes.main_course.image}" class="card-img-top" style="width:100%; height:auto;"/>
                     <p class="card-text">${restaurant.dishes.main_course.review}</p>
 
-                    <h5>Dessert: ${restaurant.dishes.dessert.name} (Rating: ${restaurant.dishes.dessert.rating})</h5>
+                    <hr>
+
+                    <h3>Dessert: ${restaurant.dishes.dessert.name} (Rating: ${restaurant.dishes.dessert.rating})</h3>
                     <img src="${restaurant.dishes.dessert.image}" class="card-img-top" style="width:100%; height:auto;"/>
                     <p class="card-text">${restaurant.dishes.dessert.review}</p>
                 </div>
@@ -80,10 +65,5 @@ function toggleInfo(index) {
 
 function setActiveLink(id) {
     document.getElementById("getAll").classList.remove("active");
-    document.getElementById("getPopular").classList.remove("active");
-    document.getElementById("getLatest").classList.remove("active");
-
     document.getElementById(id).classList.add("active");
 }
-
-
