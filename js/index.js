@@ -1,9 +1,18 @@
 let rootPath = 'data/reviews.json';
 
 function init() {
-    document.getElementById("getAll").addEventListener('click', getAllReviews);
+    document.getElementById("getAll").addEventListener("click", getAllReviews);
+    document.getElementById("about").addEventListener("click", showAbout);
     getAllReviews();
+    const navLinks = document.querySelectorAll("nav a");
+    const currentPage = window.location.pathname.split("/").pop();
+    navLinks.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        }
+    });
 }
+
 
 function getAllReviews() {
     fetchReviews();
@@ -18,6 +27,8 @@ function fetchReviews() {
         })
         .catch(error => console.error("Error fetching reviews:", error));
 }
+
+
 
 function displayReviews(data) {
     let output = "";
@@ -65,5 +76,7 @@ function toggleInfo(index) {
 
 function setActiveLink(id) {
     document.getElementById("getAll").classList.remove("active");
+    document.getElementById("about").classList.remove("active");
+    document.getElementById("contactUs").classList.remove("active");
     document.getElementById(id).classList.add("active");
 }
