@@ -250,10 +250,9 @@ button:hover {
 
 #banner2 {
   width: 100%;
-  height: 100vh;
+  height: 50vh; /* Set to cover half of the viewport height */
   background-image: url('./images/mae-mu-74HGrqRby2Q-unsplash.jpg');
   background-position: center; 
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex; 
@@ -314,5 +313,15 @@ button:hover {
 
   .card-body p {
       font-size: 0.8rem;
+  }
+
+  #banner2 {
+    height: auto; /* Adjust height to fit content */
+    padding: 20px 10px; /* Add padding for smaller screens */
+  }
+
+  #banner2 p {
+    font-size: 1rem; /* Adjust font size */
+    padding: 15px; /* Reduce padding for text */
   }
 }
